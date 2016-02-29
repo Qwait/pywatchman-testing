@@ -5,13 +5,18 @@ uname -a
 
 cd watchman
 
+# setup node environment
+cd node
+npm install
+cd ..
+
 set -e
 PATH=$PWD:$PATH
 
 if [ -z "$TRAVIS_PYTHON_VERSION" ]; then
   export PYTHON=/usr/bin/python2.7;
 else
-  export PYTHON=/usr/bin/python$TRAVIS_PYTHON_VERSION;
+  export PYTHON=$TRAVIS_PYTHON_VERSION;
 fi
 
 ./autogen.sh
