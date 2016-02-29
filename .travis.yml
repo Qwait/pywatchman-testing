@@ -1,0 +1,14 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.4"
+  - "3.5"
+
+# integration tests want python, node, and php
+before_install:
+  - curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+  - sudo apt-get -qq update
+  - sudo apt-get install -y autoconf automake nodejs php5
+
+script: ./travis.sh
