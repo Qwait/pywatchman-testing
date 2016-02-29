@@ -16,7 +16,7 @@ PATH=$PWD:$PATH
 if [ -z "$TRAVIS_PYTHON_VERSION" ]; then
   export PYTHON=/usr/bin/python2.7;
 else
-  export PYTHON=$TRAVIS_PYTHON_VERSION;
+  export PYTHON=$(which python);
 fi
 
 ./autogen.sh
