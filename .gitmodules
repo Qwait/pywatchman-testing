@@ -1,0 +1,3 @@
+[submodule "watchman"]
+	path = watchman
+	url = https://github.com/Qwait/watchman.git
